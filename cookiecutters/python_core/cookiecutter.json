@@ -1,0 +1,7 @@
+{
+    "project_name": "demo-project",
+    "project_slug": "demo_project",
+    "python_version": "3.8",
+    "author_email": "###",
+    "docker_base_image": "public.ecr.aws/docker/library/python"
+}

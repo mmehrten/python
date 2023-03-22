@@ -1,0 +1,7 @@
+# Required for terraform automation in tasks.py
+pyyaml>=5.4.1
+invoke>=1.6.0
+jinja2
+# Required to build certain packages during install
+wheel
+pip>=22.0.3
