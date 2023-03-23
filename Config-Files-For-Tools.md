@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 ## `pytest.ini`
 Create custom behavioral, external, and performance test markers:
 

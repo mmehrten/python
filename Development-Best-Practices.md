@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 # Development Best Practices
 Formatting should conform to development best practices, including:
 
@@ -124,24 +122,6 @@ class RunMode(int, enum.Enum):
     PERMISSIVE = 1
     STRICT = 2
 ```
-
-# Data Conventions
-
-## Use `num_{thing}` for counts
-
-E.g., for the number of likes on a post, use `num_likes`.
-
-## Use `handle` for public facing usernames and `profile_id` for canonical IDs
-
-`handle` represents a username / public identifier, which are subject to change over time and only serve as a representation of a profile.
-
-`profile_id` represents the internal service identifier for a profile. For example, the user with Instagram profile ID `123121` may change their username from `coolperson` to `lameperson`, but Instagram will still reference them by their ID `123121`.
-
-We should use these canonical profile IDs to refer to social media profiles as much as possible to prevent changes in username breaking our logic.
-
-## Use string typing for IDs
-
-`profile_id` might be a string for some services or an integer for others. Internally, we should store these consistently as strings.
 
 ## Use UTC timestamps with millisecond granularity
 

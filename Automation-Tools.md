@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 ## invoke
 
 Invoke is a tool to make a command-line automation tool easily, in an organized way, in native Python. This is an improvement over shell scripts because it allows us to call arbitrary Python code without the need for extensive scripting, and organizes a variety of CLI behaviors into one script rather than many.
