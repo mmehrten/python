@@ -9,7 +9,7 @@ There are a few different approaches to testing Cloud applications depending on 
 4. Sandbox environments accessed via local tests and via CI/CD pipelines (best for true functional, end-to-end, and performance testing)
 
 
-Both mocking / stubbing SDKs and cloud emulators like LocalStack attempt to mimic the AWS services/connections. This means that there can be edge cases in that emulation where things work in local testing but fail in the real cloud environment. A sandbox and dev environment within the cloud ensures a realistic reproduction of testing, automation, and CI/CD for development and integration. LocalStack and cloud emulators are a good idea, but I would not rely on them exclusively for proper testing or dev work for production apps.
+Both mocking / stubbing SDKs and cloud emulators like LocalStack attempt to mimic the AWS services/connections. This means that there can be edge cases in that emulation where things work in local testing but fail in the real cloud environment. A sandbox and dev environment within the cloud ensures a realistic reproduction of testing, automation, and CI/CD for development and integration. [LocalStack](https://github.com/localstack/localstack) and cloud emulators are an option for when you want to do local testing without using real Cloud resources, but I would not rely on them exclusively for proper testing or dev work for production apps.
 
 From the [AWS Prescriptive Guidance](https://docs.aws.amazon.com/prescriptive-guidance/latest/serverless-application-testing/techniques.html) on testing serverless applications (not the best guide in the world, but does contain some good ideas):
 
@@ -19,7 +19,7 @@ From the [AWS Prescriptive Guidance](https://docs.aws.amazon.com/prescriptive-gu
 
 LocalStack is built off of [moto](https://github.com/getmoto/moto), another cloud emulation tool, and uses a variety of tools to emulate cloud functionality. Some other projects are [kinesalite](https://github.com/mhart/kinesalite), [dynalite](https://github.com/mhart/dynalite), and [MinIO](https://min.io/), which all aim to emulate specific parts of the AWS ecosystem. I’m not aware of other projects right now that aim to emulate the entire AWS API ecosystem. 
 
-For serverless applications the [AWS Serverless Application Model (SAM)](https://aws.amazon.com/serverless/sam/) provides utilities for local development and testing. LocalStack could be used here, depending on the resources you’re interacting with. For container or EC2 based applications, a cloud emulator like LocalStack provides a viable local environment for development. 
+For serverless applications the [AWS Serverless Application Model (SAM)](https://aws.amazon.com/serverless/sam/) provides utilities for local development and testing. LocalStack could be used here, depending on the resources you’re interacting with. For container or EC2 based applications, a cloud emulator like LocalStack provides a viable local environment for development. Again, real end-to-end testing should be done in a sandbox account.
 
 
 ## Pick a test framework
