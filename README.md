@@ -5,6 +5,17 @@ different use cases. Currently it focuses on automating common
 development tasks like linting, type checking, installing packages,
 building Docker images, etc.
 
+## Best Practice Documentation
+
+See docs for development best practices:
+
+* [Python project layouts](./Layout.md)
+* [Best practices for Python development](./Development-Best-Practices.md)
+* [Automation tools to use during Python development](./Automation-Tools.md)
+  * [Config files used by automation tools](./Config-Files-For-Tools.md)
+* [Writing Dockerfiles](./Dockerfiles.md)
+* [Writing tests](./Testing.md)
+
 ## Usage
 
 This repository uses [cookiecutter](https://cookiecutter.readthedocs.io/en/1.7.2/)
